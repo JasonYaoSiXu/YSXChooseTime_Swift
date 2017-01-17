@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		827C386E1E2DFF4D00D48B30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C386D1E2DFF4D00D48B30 /* AppDelegate.swift */; };
+		827C38701E2DFF4D00D48B30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C386F1E2DFF4D00D48B30 /* ViewController.swift */; };
+		827C38731E2DFF4D00D48B30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827C38711E2DFF4D00D48B30 /* Main.storyboard */; };
+		827C38751E2DFF4D00D48B30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 827C38741E2DFF4D00D48B30 /* Assets.xcassets */; };
+		827C38781E2DFF4D00D48B30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827C38761E2DFF4D00D48B30 /* LaunchScreen.storyboard */; };
+		827C38821E2DFF7000D48B30 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C387F1E2DFF6F00D48B30 /* DateView.swift */; };
+		827C38831E2DFF7000D48B30 /* DateViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C38801E2DFF6F00D48B30 /* DateViewItem.swift */; };
+		827C38841E2DFF7000D48B30 /* DateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C38811E2DFF6F00D48B30 /* DateScrollView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		827C386A1E2DFF4D00D48B30 /* YSXChooseTime_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSXChooseTime_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		827C386D1E2DFF4D00D48B30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		827C386F1E2DFF4D00D48B30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		827C38721E2DFF4D00D48B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		827C38741E2DFF4D00D48B30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		827C38771E2DFF4D00D48B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		827C38791E2DFF4D00D48B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		827C387F1E2DFF6F00D48B30 /* DateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		827C38801E2DFF6F00D48B30 /* DateViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewItem.swift; sourceTree = "<group>"; };
+		827C38811E2DFF6F00D48B30 /* DateScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateScrollView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		827C38671E2DFF4D00D48B30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		827C38611E2DFF4D00D48B30 = {
+			isa = PBXGroup;
+			children = (
+				827C386C1E2DFF4D00D48B30 /* YSXChooseTime_Swift */,
+				827C386B1E2DFF4D00D48B30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		827C386B1E2DFF4D00D48B30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				827C386A1E2DFF4D00D48B30 /* YSXChooseTime_Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		827C386C1E2DFF4D00D48B30 /* YSXChooseTime_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				827C386D1E2DFF4D00D48B30 /* AppDelegate.swift */,
+				827C386F1E2DFF4D00D48B30 /* ViewController.swift */,
+				827C387F1E2DFF6F00D48B30 /* DateView.swift */,
+				827C38801E2DFF6F00D48B30 /* DateViewItem.swift */,
+				827C38811E2DFF6F00D48B30 /* DateScrollView.swift */,
+				827C38711E2DFF4D00D48B30 /* Main.storyboard */,
+				827C38741E2DFF4D00D48B30 /* Assets.xcassets */,
+				827C38761E2DFF4D00D48B30 /* LaunchScreen.storyboard */,
+				827C38791E2DFF4D00D48B30 /* Info.plist */,
+			);
+			path = YSXChooseTime_Swift;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		827C38691E2DFF4D00D48B30 /* YSXChooseTime_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 827C387C1E2DFF4D00D48B30 /* Build configuration list for PBXNativeTarget "YSXChooseTime_Swift" */;
+			buildPhases = (
+				827C38661E2DFF4D00D48B30 /* Sources */,
+				827C38671E2DFF4D00D48B30 /* Frameworks */,
+				827C38681E2DFF4D00D48B30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YSXChooseTime_Swift;
+			productName = YSXChooseTime_Swift;
+			productReference = 827C386A1E2DFF4D00D48B30 /* YSXChooseTime_Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		827C38621E2DFF4D00D48B30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Jason_Yao;
+				TargetAttributes = {
+					827C38691E2DFF4D00D48B30 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J3V6S85N9Y;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 827C38651E2DFF4D00D48B30 /* Build configuration list for PBXProject "YSXChooseTime_Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 827C38611E2DFF4D00D48B30;
+			productRefGroup = 827C386B1E2DFF4D00D48B30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				827C38691E2DFF4D00D48B30 /* YSXChooseTime_Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		827C38681E2DFF4D00D48B30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				827C38781E2DFF4D00D48B30 /* LaunchScreen.storyboard in Resources */,
+				827C38751E2DFF4D00D48B30 /* Assets.xcassets in Resources */,
+				827C38731E2DFF4D00D48B30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		827C38661E2DFF4D00D48B30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				827C38821E2DFF7000D48B30 /* DateView.swift in Sources */,
+				827C38841E2DFF7000D48B30 /* DateScrollView.swift in Sources */,
+				827C38831E2DFF7000D48B30 /* DateViewItem.swift in Sources */,
+				827C38701E2DFF4D00D48B30 /* ViewController.swift in Sources */,
+				827C386E1E2DFF4D00D48B30 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		827C38711E2DFF4D00D48B30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				827C38721E2DFF4D00D48B30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		827C38761E2DFF4D00D48B30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				827C38771E2DFF4D00D48B30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		827C387A1E2DFF4D00D48B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		827C387B1E2DFF4D00D48B30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		827C387D1E2DFF4D00D48B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J3V6S85N9Y;
+				INFOPLIST_FILE = YSXChooseTime_Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ysx.YSXChooseTime-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		827C387E1E2DFF4D00D48B30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J3V6S85N9Y;
+				INFOPLIST_FILE = YSXChooseTime_Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ysx.YSXChooseTime-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		827C38651E2DFF4D00D48B30 /* Build configuration list for PBXProject "YSXChooseTime_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				827C387A1E2DFF4D00D48B30 /* Debug */,
+				827C387B1E2DFF4D00D48B30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		827C387C1E2DFF4D00D48B30 /* Build configuration list for PBXNativeTarget "YSXChooseTime_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				827C387D1E2DFF4D00D48B30 /* Debug */,
+				827C387E1E2DFF4D00D48B30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 827C38621E2DFF4D00D48B30 /* Project object */;
+}
