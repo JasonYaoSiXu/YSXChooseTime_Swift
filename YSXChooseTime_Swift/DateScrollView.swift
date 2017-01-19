@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol DateScrollViewChooseDateItemDalegate: class {
+protocol DateScrollViewChooseDateItemDalegate: class {
     /// 返回选中的时间(有时差)
     ///
     /// - Parameter date: 选中的时间
@@ -25,9 +25,9 @@ public protocol DateScrollViewChooseDateItemDalegate: class {
     func getDateInto(_ dateInfo: (Int, Int, Int, Int))
 }
 
-public class DateScrollView: UIScrollView {
+class DateScrollView: UIScrollView {
     
-    weak public var chooseDelegate: DateScrollViewChooseDateItemDalegate?
+    weak var chooseDelegate: DateScrollViewChooseDateItemDalegate?
     
     fileprivate var chooseDate = Date()
     fileprivate lazy var lastOffset: CGFloat = {
@@ -75,7 +75,7 @@ public class DateScrollView: UIScrollView {
     ///   - dayLabelColor: 显示日期的label的字体颜色 默认为黑色
     ///   - maskViewColor: 选中时日期时给item加上一个选中样式，选中样式的颜色 默认为黑色
     ///   - maskViewAlpha: 选中样式图层的透明度 默认透明度为0.4
-    public init(frame: CGRect, weekLabelColor: UIColor = UIColor.black, dayLabelColor: UIColor = UIColor.black, maskViewColor: UIColor = UIColor.black, maskViewAlpha: CGFloat = 0.4) {
+    init(frame: CGRect, weekLabelColor: UIColor = UIColor.black, dayLabelColor: UIColor = UIColor.black, maskViewColor: UIColor = UIColor.black, maskViewAlpha: CGFloat = 0.4) {
         super.init(frame: frame)
         self.weekLabelColor = weekLabelColor
         self.dayLabelColor = dayLabelColor
@@ -92,7 +92,7 @@ public class DateScrollView: UIScrollView {
         initRightDateView()
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -234,7 +234,7 @@ public class DateScrollView: UIScrollView {
 
 extension DateScrollView: UIScrollViewDelegate {
     
-    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if lastOffset == scrollView.contentOffset.x {
             return
         } else {
