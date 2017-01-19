@@ -28,3 +28,5 @@ Because the DateScrollView inherit from UIScrollView,so you must set the UIViewC
 
 ![choose](https://github.com/JasonYaoSiXu/YSXChooseTime_Swift/blob/master/YSXChooseTime_Swift/屏幕快照%202017-01-19%20下午12.11.34.png)
 ![nochoose](https://github.com/JasonYaoSiXu/YSXChooseTime_Swift/blob/master/YSXChooseTime_Swift/屏幕快照%202017-01-19%20下午12.11.37.png)
+
+You can set the DateScrollView backgroundcolor 、 the choose view Color and the dateLabel's textColor
