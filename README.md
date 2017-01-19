@@ -2,7 +2,7 @@
 时间选择器
 
 ****
-pod search YSXChooseTime_Swift or pod 'YSXChooseTime_Swift', '~> 0.0.1' in your Podfile
+pod search YSXChooseTime_Swift or pod 'YSXChooseTime_Swift', '~> 0.0.6' in your Podfile
 
 use it like this
 
