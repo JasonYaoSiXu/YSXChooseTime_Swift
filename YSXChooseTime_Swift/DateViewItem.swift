@@ -13,17 +13,17 @@ protocol DateViewItemDelegate: class {
     /// 返回选中的时间(有时差)
     ///
     /// - Parameter date: 选中的时间
-    func getNormlDate(date: Date)
+    func getNormlDate(_ date: Date)
     
     /// 返回选中的时间(无时差)
     ///
     /// - Parameter date: 选中的时间
-    func getLocationGMTDate(date: Date)
+    func getLocationGMTDate(_ date: Date)
     
     /// 返回选中时间的信息，如年、月、星期、当前月的第几天
     ///
     /// - Parameter dateInfo: 参数为元组, 0为年、1为月、2为星期、3为1中的第几天
-    func getDateInto(dateInfo: (Int, Int, Int, Int))
+    func getDateInto(_ dateInfo: (Int, Int, Int, Int))
 }
 
 class DateViewItem: UIView {
@@ -87,7 +87,7 @@ class DateViewItem: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func addLabel() {
+    fileprivate func addLabel() {
         weekLabel.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height / 2)
         dateLabel.frame = CGRect(x: 0, y: self.bounds.size.height / 2, width: self.bounds.size.width, height: self.bounds.size.height / 2)
         weekLabel.textColor = weekLabelColor
@@ -97,15 +97,15 @@ class DateViewItem: UIView {
         self.addSubview(dateLabel)
     }
     
-    func setWeeklabelText(text: String) {
+    func setWeeklabelText(_ text: String) {
         weekLabel.text = text
     }
     
-    func setDateLabelText(text: String) {
+    func setDateLabelText(_ text: String) {
         dateLabel.text = text
     }
     
-    func setItemDate(date: Date) {
+    func setItemDate(_ date: Date) {
         itemDate = date
     }
     
@@ -115,19 +115,19 @@ class DateViewItem: UIView {
     
     @objc func tapDateViewItemAction() {
         isChooseed = true
-        delegate?.getNormlDate(date: itemDate)
-        delegate?.getLocationGMTDate(date: locationGMTDate())
-        delegate?.getDateInto(dateInfo: theDateInfo())
+        delegate?.getNormlDate(itemDate)
+        delegate?.getLocationGMTDate(locationGMTDate())
+        delegate?.getDateInto(theDateInfo())
     }
     
     fileprivate func locationGMTDate() -> Date {
-        let zone = NSTimeZone.system
-        let seconds = zone.secondsFromGMT(for: itemDate)
+        let timeZone = TimeZone.current
+        let seconds = timeZone.secondsFromGMT(for: itemDate)
         return itemDate.addingTimeInterval(TimeInterval(seconds))
     }
     
     fileprivate func theDateInfo() -> (Int, Int, Int, Int) {
-        let component = NSCalendar.current.dateComponents([.year, .month, .weekday, .day], from: itemDate)
+        let component = Calendar.current.dateComponents([.year, .month, .weekday, .day], from: itemDate)
         
         var weekDay = 0
         switch (component.weekday ?? 0) {

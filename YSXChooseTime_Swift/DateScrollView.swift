@@ -12,22 +12,22 @@ public protocol DateScrollViewChooseDateItemDalegate: class {
     /// 返回选中的时间(有时差)
     ///
     /// - Parameter date: 选中的时间
-    func getNormlDate(date: Date)
+    func getNormlDate(_ date: Date)
     
     /// 返回选中的时间(无时差)
     ///
     /// - Parameter date: 选中的时间
-    func getLocationGMTDate(date: Date)
+    func getLocationGMTDate(_ date: Date)
     
     /// 返回选中时间的信息，如年、月、星期、当前月的第几天
     ///
     /// - Parameter dateInfo: 参数为元组, 0为年、1为月、2为星期、3为1中的第几天
-    func getDateInto(dateInfo: (Int, Int, Int, Int))
+    func getDateInto(_ dateInfo: (Int, Int, Int, Int))
 }
 
-public class DateScrollView: UIScrollView {
+open class DateScrollView: UIScrollView {
     
-    weak public var chooseDelegate: DateScrollViewChooseDateItemDalegate?
+    weak open var chooseDelegate: DateScrollViewChooseDateItemDalegate?
     
     fileprivate var chooseDate = Date()
     fileprivate lazy var lastOffset: CGFloat = {
@@ -96,7 +96,7 @@ public class DateScrollView: UIScrollView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func initSetting() {
+    fileprivate func initSetting() {
         self.contentSize = CGSize(width: self.bounds.size.width * 3, height: self.bounds.size.height)
         self.contentOffset = CGPoint(x: self.bounds.size.width, y: 0)
         self.isPagingEnabled = true
@@ -109,22 +109,22 @@ public class DateScrollView: UIScrollView {
     
     /// 初始化midDateView
     func initMidDateView() {
-        let compontes = getTodayWeek(date: toDay)
+        let compontes = getTodayWeek(toDay)
         for i in 0..<midDateView.subviews.count {
             guard let dateViewItem = midDateView.subviews[i] as? DateViewItem else { return }
-            let date = theDayWithOneDay(numberOfDays: (i + 1) - compontes.0, date: toDay)
+            let date = theDayWithOneDay((i + 1) - compontes.0, date: toDay)
             if i == 0 {
                 firstDate = date
             } else if i == midDateView.subviews.count - 1 {
                 lastDate = date
             }
-            let componte = getTodayWeek(date: date)
-            dateViewItem.setWeeklabelText(text: weekArrayOfEnglish[componte.0 - 1])
-            dateViewItem.setItemDate(date: date)
+            let componte = getTodayWeek(date)
+            dateViewItem.setWeeklabelText(weekArrayOfEnglish[componte.0 - 1])
+            dateViewItem.setItemDate(date)
             if date == toDay {
-                dateViewItem.setDateLabelText(text: "今")
+                dateViewItem.setDateLabelText("今")
             } else {
-                dateViewItem.setDateLabelText(text: "\(componte.1)")
+                dateViewItem.setDateLabelText("\(componte.1)")
             }
         }
     }
@@ -134,11 +134,11 @@ public class DateScrollView: UIScrollView {
     func initLeftDateView() {
         for i in 0..<leftDateView.subviews.count {
             guard let dateViewItem = leftDateView.subviews[i] as? DateViewItem else { return }
-            let date = theDayWithOneDay(numberOfDays: -(7 - i), date: firstDate)
-            let componte = getTodayWeek(date: date)
-            dateViewItem.setWeeklabelText(text: weekArrayOfEnglish[componte.0 - 1])
-            dateViewItem.setItemDate(date: date)
-            dateViewItem.setDateLabelText(text: "\(componte.1)")
+            let date = theDayWithOneDay(-(7 - i), date: firstDate)
+            let componte = getTodayWeek(date)
+            dateViewItem.setWeeklabelText(weekArrayOfEnglish[componte.0 - 1])
+            dateViewItem.setItemDate(date)
+            dateViewItem.setDateLabelText("\(componte.1)")
         }
     }
     
@@ -147,11 +147,11 @@ public class DateScrollView: UIScrollView {
     func initRightDateView() {
         for i in 0..<rightDateView.subviews.count {
             guard let dateViewItem = rightDateView.subviews[i] as? DateViewItem else { return }
-            let date = theDayWithOneDay(numberOfDays: i + 1, date: lastDate)
-            let componte = getTodayWeek(date: date)
-            dateViewItem.setWeeklabelText(text: weekArrayOfEnglish[componte.0 - 1])
-            dateViewItem.setItemDate(date: date)
-            dateViewItem.setDateLabelText(text: "\(componte.1)")
+            let date = theDayWithOneDay(i + 1, date: lastDate)
+            let componte = getTodayWeek(date)
+            dateViewItem.setWeeklabelText(weekArrayOfEnglish[componte.0 - 1])
+            dateViewItem.setItemDate(date)
+            dateViewItem.setDateLabelText("\(componte.1)")
         }
     }
     
@@ -159,8 +159,8 @@ public class DateScrollView: UIScrollView {
     ///
     /// - Parameter date: 要计算的那一天
     /// - Returns: 返回值为元组，0为星期几,1为当前月的第几天
-    func getTodayWeek(date: Date) -> (Int, Int) {
-        let component = NSCalendar.current.dateComponents([.weekday, .day], from: date)
+    func getTodayWeek(_ date: Date) -> (Int, Int) {
+        let component = Calendar.current.dateComponents([.weekday, .day], from: date)
         var weekDay = 0
         switch (component.weekday ?? 0) {
         case 2...7:
@@ -176,7 +176,7 @@ public class DateScrollView: UIScrollView {
     ///
     /// - Parameter numberOfDays: 距离今天有几天
     /// - Returns: 距离今天前/后numberOfDays的那天
-    func theDayWithOneDay(numberOfDays: Int, date: Date) -> Date {
+    func theDayWithOneDay(_ numberOfDays: Int, date: Date) -> Date {
         let secondsOfDay: TimeInterval = 60 * 60 * 24
         return date.addingTimeInterval(TimeInterval(numberOfDays) * secondsOfDay)
     }
@@ -184,17 +184,17 @@ public class DateScrollView: UIScrollView {
     /// 滑动scrollView时作处理
     ///
     /// - Parameter direction: 0 为向右滑， 1为向左滑(手指移动的方向)
-    func scrolToLeftOrRight(direction: Int) {
+    func scrolToLeftOrRight(_ direction: Int) {
         print("\(#function),\(direction)")
         
         if direction != 0 && direction != 1 {
             return
         }
-        caculateMidDateView(direction: direction)
+        caculateMidDateView(direction)
         self.contentOffset = CGPoint(x: self.bounds.size.width, y: 0)
     }
     
-    func caculateMidDateView(direction: Int) {
+    func caculateMidDateView(_ direction: Int) {
         var caculateFirstDate = Date()
         var caculateLastDate = Date()
         
@@ -202,20 +202,20 @@ public class DateScrollView: UIScrollView {
             guard let dateViewitem = midDateView.subviews[i] as? DateViewItem else { return }
             var date = Date()
             if direction == 1 {
-                date = theDayWithOneDay(numberOfDays: (i + 1), date: lastDate)
+                date = theDayWithOneDay((i + 1), date: lastDate)
             } else {
-                date = theDayWithOneDay(numberOfDays: -(7 - i), date: firstDate)
+                date = theDayWithOneDay(-(7 - i), date: firstDate)
             }
-            let component = getTodayWeek(date: date)
-            dateViewitem.setWeeklabelText(text: weekArrayOfEnglish[component.0 - 1])
+            let component = getTodayWeek(date)
+            dateViewitem.setWeeklabelText(weekArrayOfEnglish[component.0 - 1])
             dateViewitem.isChooseed = false
             if date == chooseDate {
                 dateViewitem.isChooseed = true
             }
-            dateViewitem.setItemDate(date: date)
-            dateViewitem.setDateLabelText(text: "\(component.1)")
+            dateViewitem.setItemDate(date)
+            dateViewitem.setDateLabelText("\(component.1)")
             if date == toDay {
-                dateViewitem.setDateLabelText(text: "今")
+                dateViewitem.setDateLabelText("今")
             }
             if i == 0 {
                 caculateFirstDate = date
@@ -239,9 +239,9 @@ extension DateScrollView: UIScrollViewDelegate {
             return
         } else {
             if lastOffset < scrollView.contentOffset.x {
-                scrolToLeftOrRight(direction: 1)
+                scrolToLeftOrRight(1)
             } else {
-                scrolToLeftOrRight(direction: 0)
+                scrolToLeftOrRight(0)
             }
             lastOffset = scrollView.contentOffset.x
         }
@@ -251,8 +251,8 @@ extension DateScrollView: UIScrollViewDelegate {
 
 extension DateScrollView : DateViewDalegate {
     
-    func getNormlDate(date: Date) {
-        chooseDelegate?.getNormlDate(date: date)
+    func getNormlDate(_ date: Date) {
+        chooseDelegate?.getNormlDate(date)
         chooseDate = date
         midDateView.subviews.forEach({
            guard  let dateViewItem = $0 as? DateViewItem else { return }
@@ -264,12 +264,12 @@ extension DateScrollView : DateViewDalegate {
         })
     }
     
-    func getLocationGMTDate(date: Date) {
-        chooseDelegate?.getLocationGMTDate(date: date)
+    func getLocationGMTDate(_ date: Date) {
+        chooseDelegate?.getLocationGMTDate(date)
     }
     
-    func getDateInto(dateInfo: (Int, Int, Int, Int)) {
-        chooseDelegate?.getDateInto(dateInfo: dateInfo)
+    func getDateInto(_ dateInfo: (Int, Int, Int, Int)) {
+        chooseDelegate?.getDateInto(dateInfo)
     }
     
 }

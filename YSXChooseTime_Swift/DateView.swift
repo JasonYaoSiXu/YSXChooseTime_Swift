@@ -14,24 +14,24 @@ protocol DateViewDalegate: class {
     /// 返回选中的时间(有时差)
     ///
     /// - Parameter date: 选中的时间
-    func getNormlDate(date: Date)
+    func getNormlDate(_ date: Date)
     
     /// 返回选中的时间(无时差)
     ///
     /// - Parameter date: 选中的时间
-    func getLocationGMTDate(date: Date)
+    func getLocationGMTDate(_ date: Date)
     
     /// 返回选中时间的信息，如年、月、星期、当前月的第几天
     ///
     /// - Parameter dateInfo: 参数为元组, 0为年、1为月、2为星期、3为1中的第几天
-    func getDateInto(dateInfo: (Int, Int, Int, Int))
+    func getDateInto(_ dateInfo: (Int, Int, Int, Int))
 }
 
 class DateView: UIView {
     
     weak var delegate: DateViewDalegate?
     
-    private var itemCount = 7
+    fileprivate var itemCount = 7
     fileprivate var weekLabelColor = UIColor.black
     fileprivate var dayLabelColor = UIColor.black
     fileprivate var maskViewColor = UIColor.black
@@ -58,8 +58,8 @@ class DateView: UIView {
                                             weekLabelColor: self.weekLabelColor, dayLabelColor: self.dayLabelColor,
                                             maskViewColor: self.maskViewColor, maskViewAlpha: self.maskViewAlpha)
             dateViewItem.delegate = self
-            dateViewItem.setWeeklabelText(text: weekArrayOfEnglish[i])
-            dateViewItem.setDateLabelText(text: "\(i)")
+            dateViewItem.setWeeklabelText(weekArrayOfEnglish[i])
+            dateViewItem.setDateLabelText("\(i)")
             self.addSubview(dateViewItem)
         }
     }
@@ -68,16 +68,16 @@ class DateView: UIView {
 
 extension DateView : DateViewItemDelegate {
     
-    func getNormlDate(date: Date) {
-        delegate?.getNormlDate(date: date)
+    func getNormlDate(_ date: Date) {
+        delegate?.getNormlDate(date)
     }
     
-    func getLocationGMTDate(date: Date) {
-        delegate?.getLocationGMTDate(date: date)
+    func getLocationGMTDate(_ date: Date) {
+        delegate?.getLocationGMTDate(date)
     }
     
-    func getDateInto(dateInfo: (Int, Int, Int, Int)) {
-        delegate?.getDateInto(dateInfo: dateInfo)
+    func getDateInto(_ dateInfo: (Int, Int, Int, Int)) {
+        delegate?.getDateInto(dateInfo)
     }
     
 }
