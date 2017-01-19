@@ -15,6 +15,8 @@
 		827C38821E2DFF7000D48B30 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C387F1E2DFF6F00D48B30 /* DateView.swift */; };
 		827C38831E2DFF7000D48B30 /* DateViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C38801E2DFF6F00D48B30 /* DateViewItem.swift */; };
 		827C38841E2DFF7000D48B30 /* DateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C38811E2DFF6F00D48B30 /* DateScrollView.swift */; };
+		829D16951E30748200B979A5 /* 屏幕快照 2017-01-19 下午12.11.34.png in Resources */ = {isa = PBXBuildFile; fileRef = 829D16931E30748200B979A5 /* 屏幕快照 2017-01-19 下午12.11.34.png */; };
+		829D16961E30748200B979A5 /* 屏幕快照 2017-01-19 下午12.11.37.png in Resources */ = {isa = PBXBuildFile; fileRef = 829D16941E30748200B979A5 /* 屏幕快照 2017-01-19 下午12.11.37.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		827C387F1E2DFF6F00D48B30 /* DateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		827C38801E2DFF6F00D48B30 /* DateViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewItem.swift; sourceTree = "<group>"; };
 		827C38811E2DFF6F00D48B30 /* DateScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateScrollView.swift; sourceTree = "<group>"; };
+		829D16931E30748200B979A5 /* 屏幕快照 2017-01-19 下午12.11.34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2017-01-19 下午12.11.34.png"; sourceTree = "<group>"; };
+		829D16941E30748200B979A5 /* 屏幕快照 2017-01-19 下午12.11.37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2017-01-19 下午12.11.37.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		827C386C1E2DFF4D00D48B30 /* YSXChooseTime_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				829D16921E30746D00B979A5 /* Image */,
 				827C386D1E2DFF4D00D48B30 /* AppDelegate.swift */,
 				827C386F1E2DFF4D00D48B30 /* ViewController.swift */,
 				827C387F1E2DFF6F00D48B30 /* DateView.swift */,
@@ -71,6 +76,15 @@
 				827C38791E2DFF4D00D48B30 /* Info.plist */,
 			);
 			path = YSXChooseTime_Swift;
+			sourceTree = "<group>";
+		};
+		829D16921E30746D00B979A5 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				829D16931E30748200B979A5 /* 屏幕快照 2017-01-19 下午12.11.34.png */,
+				829D16941E30748200B979A5 /* 屏幕快照 2017-01-19 下午12.11.37.png */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				827C38781E2DFF4D00D48B30 /* LaunchScreen.storyboard in Resources */,
+				829D16951E30748200B979A5 /* 屏幕快照 2017-01-19 下午12.11.34.png in Resources */,
 				827C38751E2DFF4D00D48B30 /* Assets.xcassets in Resources */,
 				827C38731E2DFF4D00D48B30 /* Main.storyboard in Resources */,
+				829D16961E30748200B979A5 /* 屏幕快照 2017-01-19 下午12.11.37.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
