@@ -234,7 +234,7 @@ class DateScrollView: UIScrollView {
 
 extension DateScrollView: UIScrollViewDelegate {
     
-    func public scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func  scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if lastOffset == scrollView.contentOffset.x {
             return
         } else {
