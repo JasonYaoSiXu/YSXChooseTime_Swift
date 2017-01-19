@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		827C386E1E2DFF4D00D48B30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C386D1E2DFF4D00D48B30 /* AppDelegate.swift */; };
-		827C38701E2DFF4D00D48B30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C386F1E2DFF4D00D48B30 /* ViewController.swift */; };
 		827C38731E2DFF4D00D48B30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827C38711E2DFF4D00D48B30 /* Main.storyboard */; };
 		827C38751E2DFF4D00D48B30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 827C38741E2DFF4D00D48B30 /* Assets.xcassets */; };
 		827C38781E2DFF4D00D48B30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827C38761E2DFF4D00D48B30 /* LaunchScreen.storyboard */; };
@@ -21,8 +19,6 @@
 
 /* Begin PBXFileReference section */
 		827C386A1E2DFF4D00D48B30 /* YSXChooseTime_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSXChooseTime_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		827C386D1E2DFF4D00D48B30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		827C386F1E2DFF4D00D48B30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		827C38721E2DFF4D00D48B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		827C38741E2DFF4D00D48B30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		827C38771E2DFF4D00D48B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,8 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				829D16921E30746D00B979A5 /* Image */,
-				827C386D1E2DFF4D00D48B30 /* AppDelegate.swift */,
-				827C386F1E2DFF4D00D48B30 /* ViewController.swift */,
 				827C387F1E2DFF6F00D48B30 /* DateView.swift */,
 				827C38801E2DFF6F00D48B30 /* DateViewItem.swift */,
 				827C38811E2DFF6F00D48B30 /* DateScrollView.swift */,
@@ -166,8 +160,6 @@
 				827C38821E2DFF7000D48B30 /* DateView.swift in Sources */,
 				827C38841E2DFF7000D48B30 /* DateScrollView.swift in Sources */,
 				827C38831E2DFF7000D48B30 /* DateViewItem.swift in Sources */,
-				827C38701E2DFF4D00D48B30 /* ViewController.swift in Sources */,
-				827C386E1E2DFF4D00D48B30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

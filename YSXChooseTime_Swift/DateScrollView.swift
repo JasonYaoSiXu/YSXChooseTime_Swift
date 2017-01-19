@@ -25,9 +25,9 @@ public protocol DateScrollViewChooseDateItemDalegate: class {
     func getDateInto(_ dateInfo: (Int, Int, Int, Int))
 }
 
-open class DateScrollView: UIScrollView {
+public class DateScrollView: UIScrollView {
     
-    weak open var chooseDelegate: DateScrollViewChooseDateItemDalegate?
+    weak public var chooseDelegate: DateScrollViewChooseDateItemDalegate?
     
     fileprivate var chooseDate = Date()
     fileprivate lazy var lastOffset: CGFloat = {
