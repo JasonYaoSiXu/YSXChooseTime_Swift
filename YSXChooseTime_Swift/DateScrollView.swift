@@ -25,7 +25,7 @@ public protocol DateScrollViewChooseDateItemDalegate: class {
     func getDateInto(_ dateInfo: (Int, Int, Int, Int))
 }
 
-class DateScrollView: UIScrollView {
+public class DateScrollView: UIScrollView {
     
     public weak var chooseDelegate: DateScrollViewChooseDateItemDalegate?
     
